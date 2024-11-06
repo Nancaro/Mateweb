@@ -1,0 +1,726 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #333333;;
+    color: #333;
+    margin: 0px;
+    padding: 0;
+}
+
+/* Estilo del banner */
+.banner {
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('background.jpg');
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    height: 100vh;/* Ocupa el 100% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px; /* Ajusta el tamaño del logo según tu preferencia */
+    height: auto;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 
+    2px 2px 0 #000,    /* Sombra hacia abajo a la derecha */
+       -2px 2px 0 #000,    /* Sombra hacia abajo a la izquierda */
+        2px -2px 0 #000,   /* Sombra hacia arriba a la derecha */
+       -2px -2px 0 #000,   /* Sombra hacia arriba a la izquierda */
+        2px 0 0 #000,      /* Sombra a la derecha */
+       -2px 0 0 #000,      /* Sombra a la izquierda */
+        0 2px 0 #000,      /* Sombra hacia abajo */
+        0 -2px 0 #000;     /* Sombra hacia arriba */
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+     2px -2px 0 #000,
+    -2px -2px 0 #000,
+     2px 0 0 #000,
+    -2px 0 0 #000,
+     0 2px 0 #000,
+     0 -2px 0 #000;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+     2px -2px 0 #000,
+    -2px -2px 0 #000,
+     2px 0 0 #000,
+    -2px 0 0 #000,
+     0 2px 0 #000,
+     0 -2px 0 #000;
+}
+
+/* Estilos base del botón */
+.banner-button {
+    background-color: #007BFF; /* Cambiado para coincidir con el color del segundo botón */
+    color: #fff;
+    padding: 15px 30px; /* Cambiado para coincidir con el segundo botón */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de Hover */
+.banner-button:hover {
+    background-color: #0056b3;
+}
+
+/* Animación en el botón */
+.banner-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.banner-button:hover::before {
+    transform: scale(3);
+}
+
+/* Texto en el botón */
+.banner-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-SEO.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px; 
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botón de Llamada a la Acción */
+#cta-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de Hover */
+#cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Animación en el botón */
+#cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+    transform: scale(0);
+    z-index: 1;
+}
+
+#cta-button:hover::before {
+    transform: scale(3);
+}
+
+#cta-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos de la sección de servicios */
+.services {
+    background-color: #3b3b3b;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #d3d3d3;
+}
+
+/* Contenedor de tarjetas */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 20px;
+    justify-items: center; /* Centra las tarjetas en cada columna */
+    max-width: 900px; /* Limita el ancho máximo del contenedor para centrarlo */
+    width: 100%;
+}
+
+/* Estilos de cada tarjeta */
+.service-card {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de la tarjeta */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Información de la tarjeta */
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bdbdbd;
+}
+
+/* Botón de la tarjeta */
+.service-info button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-info button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos generales de la sección del expositor */
+.web-showcase {
+    background-color: #3b3b3b;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.web-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.web-showcase p {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de tarjetas */
+.web-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 20px;
+    justify-items: center; /* Centra las tarjetas en cada columna */
+    max-width: 900px; /* Limita el ancho máximo del contenedor para centrarlo */
+    width: 100%;
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+
+/* Estilos de cada tarjeta */
+.web-card {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.web-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de la tarjeta */
+.web-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Información de la tarjeta */
+.web-info {
+    padding: 20px;
+}
+
+.web-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.web-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bdbdbd;
+}
+
+/* Botón de la tarjeta */
+.web-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.web-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
+    /* Estilos generales de la sección */
+    .testimonials-section {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 80px 20px;
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .testimonials-section p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        color: #ddd;
+    }
+
+    /* Contenedor del carrusel */
+    .testimonial-container {
+        overflow: hidden;
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Pista del carrusel */
+    .testimonial-slider {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    /* Tarjeta del testimonio */
+    .testimonial {
+        width: 100%;
+        background-color: #444;
+        padding: 30px;
+        border-radius: 15px;
+        color: #f4f4f4;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        margin-right: 30px; /* Para mostrar el siguiente testimonio parcialmente */
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Imagen de perfil */
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+        object-fit: cover;
+    }
+
+    /* Texto dentro de cada testimonio */
+    .testimonial-content {
+        flex: 1;
+    }
+
+    /* Controles de navegación */
+    .controls {
+        gap: 10px;
+        margin-top: 20px;
+        position: absolute;
+        left: 350px; /* Ajusta este valor para mover los botones más hacia la izquierda */
+
+    }
+
+    .controls button {
+        width: 50px;
+        height: 50px;
+        background-color: #555;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .controls button:hover {
+        background-color: #777;
+    }
+
+
+/* Estilos de la sección de valores */
+.values-section {
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-value.jpg'); /* Cambia 'background.jpg' por la URL de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro transparente */
+}
+
+.content {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.content h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.value {
+    flex: 1 1 300px;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.value h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.value p {
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+/* Estilos de la sección de contacto */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #444;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+}
+
+.contact-section .email-contact {
+    margin-top: 20px;
+}
+
+.contact-section .email-contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section .email-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la sección de footer */
+.footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #b0b0b0;
+}
+
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content .social-media a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content .social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad para tablets (pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .banner {
+        padding: 60px 10px;
+        height: auto; /* Permitir altura automática para que el contenido se ajuste */
+    }
+    
+    .banner h1, .banner h2 {
+        font-size: 1.8em;
+    }
+
+    .banner p {
+        font-size: 1em;
+    }
+
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    .testimonial-container, .testimonial-slider {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Ajustar tamaños de imagenes */
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-section, .footer {
+        padding: 30px 10px;
+    }
+}
+
+/* Responsividad para móviles (pantallas de hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .banner {
+        padding: 40px 10px;
+    }
+
+    .banner h1, .banner h2 {
+        font-size: 1.5em;
+    }
+
+    .banner p {
+        font-size: 0.9em;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    /* Ajustar botones para móviles */
+    .banner-button, #cta-button, .service-info button, .web-button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    /* Testimonios y tarjetas de servicio en una sola columna */
+    .testimonial-container {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .service-cards, .web-cards {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .values-section {
+        padding: 50px 10px;
+    }
+
+    .values {
+        flex-direction: column;
+    }
+
+    /* Sección de contacto y footer */
+    .contact-section {
+        padding: 20px;
+    }
+
+    .footer-content p {
+        font-size: 0.8em;
+    }
+}
+/* Ocultar logo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+}
+/* Ocultar logo solo en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+}
+
